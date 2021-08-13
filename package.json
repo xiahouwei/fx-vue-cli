@@ -1,0 +1,33 @@
+{
+  "name": "fx-vue-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "fx-vue": "bin/vue.js",
+    "fx-vue-init": "bin/vue-init.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/cli-shared-utils": "^4.5.13",
+    "async": "^3.2.1",
+    "axios": "^0.21.1",
+    "commander": "^8.1.0",
+    "consolidate": "^0.16.0",
+    "download-git-repo": "^3.0.2",
+    "ejs": "^3.1.6",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.1.2",
+    "log-symbols": "^5.0.0",
+    "metalsmith": "^2.3.0",
+    "ncp": "^2.0.0",
+    "ora": "^5.4.1",
+    "utils": "^0.3.1",
+    "validate-npm-package-name": "^3.0.0"
+  }
+}
