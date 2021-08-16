@@ -4,7 +4,11 @@ const { chalk } = require('@vue/cli-shared-utils')
 const program = require('commander')
 
 
-// -V 获取版本号
+/**
+ * 2.x创建项目命令
+ * -V 获取版本号
+ * -f 覆盖路径
+ */
 program
     .version(require('../package.json').version)
     .description('风行 vue-cli2.0 脚手架')
@@ -15,7 +19,7 @@ program
             console.log('error: missing required argument "app-name"')
             return program.help()
         }
-        require('../lib/init')(program.args[0], args)
+        require('../lib/src2.0/init')(program.args[0], args)
     })
 
 

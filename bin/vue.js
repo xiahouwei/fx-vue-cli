@@ -10,14 +10,6 @@ program
     .description('风行 vue-cli 脚手架')
     .usage('<command> [options]')
 
-// init 命令 2.x创建项目命令
-program
-    .command('init <app-name>')
-    .description('create a new project powered by vue-cli-service')
-    .option('-f, --force', 'Overwrite target directory if it exists')
-    .action((name, otherD, cmd) => {
-        require('../lib/init')(name, otherD)
-    })
 
 // create 命令 3.x创建项目命令
 program
@@ -37,7 +29,7 @@ program
     .option('-b, --bare', 'Scaffold project without beginner instructions')
     .option('--skipGetStarted', 'Skip displaying "Get started" instructions')
     .action((name, otherD, cmd) => {
-        require('../lib/create')(name, otherD)
+        require('../lib/src3.0/create')(name, otherD)
     })
 
 program.on('--help', () => {
