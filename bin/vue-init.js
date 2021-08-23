@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
-const { chalk } = require('@vue/cli-shared-utils')
-const program = require('commander')
+const { chalk } = require('@vue/cli-shared-utils') // chalk 用于改变终端字体颜色, 进行高亮
+const program = require('commander') // commander 插件用于声明解析命令
 
 
 /**
