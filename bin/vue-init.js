@@ -12,22 +12,27 @@ const program = require('commander') // commander 插件用于声明解析命令
 program
     .version(require('../package.json').version)
     .description('风行 vue-cli2.0 脚手架')
-    .usage('<app-name>')
+    .usage('<template-name> [project-name]')
     .option('-f, --force', 'Overwrite target directory if it exists')
     .action((args) => {
         if (program.args.length < 1) {
-            console.log('error: missing required argument "app-name"')
+            console.log('error: missing required argument "template-name"')
             return program.help()
         }
-        require('../lib/src2.0/init')(program.args[0], args)
+        const templateName = program.args[0]
+        const projectName = program.args[1]
+        require('../lib/src2.0/init')(templateName, projectName, args)
     })
 
 
 program.on('--help', () => {
     console.log('  Examples:')
     console.log()
-    console.log(chalk.gray('    # create a new project with template'))
-    console.log('    $ fx-vue-init my-project')
+    console.log(chalk.gray('    # create a new project with an official template'))
+    console.log('    $ fx-vue-init webpack my-project')
+    console.log()
+    console.log(chalk.gray('    # create a new project straight from a github template'))
+    console.log('    $ fx-vue-init username/repo my-project')
     console.log()
 })
 
