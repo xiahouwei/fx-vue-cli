@@ -33,6 +33,7 @@
     "lodash.clonedeep": "^4.5.0",
     "log-symbols": "^5.0.0",
     "metalsmith": "^2.3.0",
+    "minimatch": "^3.0.0",
     "ncp": "^2.0.0",
     "ora": "^5.4.1",
     "read-metadata": "^1.0.0",
